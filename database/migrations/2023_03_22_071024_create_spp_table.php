@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSppsTable extends Migration
+class CreateSppTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateSppsTable extends Migration
      */
     public function up()
     {
-        Schema::create('spps', function (Blueprint $table) {
-            $table->integer('id_spp');
+        Schema::create('spp', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->integer('tahun');
             $table->integer('nominal');
             $table->timestamps();
@@ -28,6 +28,6 @@ class CreateSppsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spps');
+        Schema::dropIfExists('spp');
     }
 }

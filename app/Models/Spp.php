@@ -5,13 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Spp extends Model
+class spp extends Model
 {
     use HasFactory;
+    protected $table = 'spp';
 
-    protected $table = 'spps';
+    protected $guarded = [
+         'id'
+    ];
 
-    protected $primaryKey = 'id_spp';
-
-    protected $guarded = ['id_spp'];
+    public function user()
+   {
+         return $this->belongsTo(User::class);
+   }
 }
