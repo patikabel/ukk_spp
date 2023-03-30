@@ -13,8 +13,8 @@
             <div class="d-flex justify-content-center">
                 <div class="card position-absolute top-50 start-50 translate-middle" style="width: 20rem;">
                     <div class="card-body">
-                        @if (session()->has('gagal login'))
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">{{ session('gagal login') }}</div>
+                        @if (session()->has('gagal'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">{{ session('gagal') }}</div>
                         @endif
                         <form action="login" method="POST">
                             @csrf

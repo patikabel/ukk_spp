@@ -28,7 +28,7 @@ class LoginController extends Controller
             return redirect('/dashboard');
         }
 
-        return back()->with('salah', 'maaf email atau password yang anda masukan salah!');
+        return back()->with('gagal', 'email atau password yang anda masukan salah!');
     }
     public function loginsiswa(){
         return view('auth.login-siswa');
