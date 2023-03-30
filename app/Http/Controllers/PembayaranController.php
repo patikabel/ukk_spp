@@ -28,7 +28,10 @@ class PembayaranController extends Controller
             'user' => User::find(auth()->user()->id)
         ];
 
-        return view('dashboard.entry-pembayaran.index', $data);
+        return view('dashboard.entry-pembayaran.index', $data, [
+            'title' => 'Bayar | Page'
+
+        ]);
     }
 
     /**
@@ -110,7 +113,10 @@ class PembayaranController extends Controller
             // 'siswa' => Spp::find($id)
          ];
 
-         return view('dashboard.entry-pembayaran.edit', $data);
+         return view('dashboard.entry-pembayaran.edit', $data, [
+            'title' => 'EditBayar | Page'
+
+         ]);
     }
 
     /**

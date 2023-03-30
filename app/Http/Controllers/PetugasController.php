@@ -26,7 +26,10 @@ class PetugasController extends Controller
             'user' => User::find(auth()->user()->id)
          ];
 
-        return view('dashboard.data-petugas.index', $data);
+        return view('dashboard.data-petugas.index', $data, [
+            'title' => 'Petugas | Page'
+
+        ]);
     }
 
     /**
@@ -40,7 +43,10 @@ class PetugasController extends Controller
             'user' => User::find(auth()->user()->id)
       ];
 
-       return view('dashboard.data-petugas.create', $data);
+       return view('dashboard.data-petugas.create', $data, [
+        'title' => 'EditPetugas | Page'
+
+       ]);
     }
 
     /**

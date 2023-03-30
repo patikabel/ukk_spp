@@ -101,7 +101,10 @@ class SppController extends Controller
              'user' => User::find(auth()->user()->id)
         ];
 
-        return view('dashboard.data-spp.edit', $data);
+        return view('dashboard.data-spp.edit', $data, [
+            'title' => 'Spp | Page'
+
+        ]);
     }
 
     /**

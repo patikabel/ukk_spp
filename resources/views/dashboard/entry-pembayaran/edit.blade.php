@@ -22,14 +22,14 @@
                                 <input type="text" class="form-control @error('nisn') is-invalid @enderror" name="nisn" value="{{ $edit->siswa->nisn }}">
                                 <span class="text-danger">@error('nisn') {{ $message }} @enderror</span>
                              </div>
-
+                             <br>
                              <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                    <label class="input-group-text">
                                       SPP Bulan
                                    </label>
                                 </div>
-                                <select class="custom-select @error('spp_bulan') is-invalid @enderror" name="spp_bulan">
+                                <select class="form-control @error('spp_bulan') is-invalid @enderror" name="spp_bulan">
                                       <option value="">Silahkan Pilih</option>
                                          <option value="januari" {{ $edit->spp_bulan == 'januari' ? 'selected' : '' }}>Januari</option>
                                          <option value="februari" {{ $edit->spp_bulan == 'februari' ? 'selected' : '' }}>Februari</option>
@@ -52,7 +52,7 @@
                                <input type="text" class="form-control @error('jumlah_bayar') is-invalid @enderror" name="jumlah_bayar" value="{{ $edit->jumlah_bayar }}">
                                <span class="text-danger">@error('jumlah_bayar') {{ $message }} @enderror</span>
                             </div>
-
+                            <br>
                            <a href="{{ url('dashboard') }}" class="btn btn-primary btn-rounded">
                              <i class="mdi mdi-chevron-left"></i>Kembali
                            </a>

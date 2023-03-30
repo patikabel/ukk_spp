@@ -29,7 +29,10 @@ class SiswaController extends Controller
             'siswa' => Siswa::orderBy('id', 'DESC')->paginate(5),
         ];
 
-        return view('dashboard.data-siswa.index', $data);
+        return view('dashboard.data-siswa.index', $data, [
+            'title' => 'Siswa | Page'
+
+        ]);
     }
 
     /**
