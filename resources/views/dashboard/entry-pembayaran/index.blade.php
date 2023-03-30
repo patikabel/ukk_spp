@@ -18,14 +18,14 @@
                                 <input type="text" class="form-control @error('nisn') is-invalid @enderror" name="nisn" autocomplete="off">
                                 <span class="text-danger">@error('nisn') {{ $message }} @enderror</span>
                              </div>
-
+                             <br>
                                <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                    <label class="input-group-text">
                                       SPP Bulan
                                    </label>
                                 </div>
-                                <select class="custom-select @error('spp_bulan') is-invalid @enderror" name="spp_bulan">
+                                <select class="form-control @error('spp_bulan') is-invalid @enderror" name="spp_bulan">
 
                                       <option value="">Silahkan Pilih</option>
                                          <option value="januari">Januari</option>
@@ -49,7 +49,7 @@
                                <input type="text" class="form-control @error('jumlah_bayar') is-invalid @enderror" name="jumlah_bayar">
                                <span class="text-danger">@error('jumlah_bayar') {{ $message }} @enderror</span>
                             </div>
-
+                            <br>
                            <button type="submit" class="btn btn-success btn-rounded float-right">
                              <i class="mdi mdi-check"></i> Simpan
                            </button>

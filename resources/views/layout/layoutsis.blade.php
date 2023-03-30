@@ -39,48 +39,11 @@
     <nav class="navbar navbar-expand-lg" style="background-color: #F5EBEB">
         <div class="container">
           <a class="navbar-brand" href="#"><b>Spp</b></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/dashboard">Home</a>
-              </li>
-              @if (auth()->User()->level == 'admin')
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/dashboard/data-petugas">Petugas</a>
-              </li>
-              @endif
+          <a class="nav-link active" aria-current="page" href="/dashboard/history-pembayaran">History</a>
 
-              @if(auth()->user()->level == 'admin' || auth()->User()->level == 'petugas')
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/dashboard/entry-pembayaran">Bayar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/dashboard/history-pembayaran">History</a>
-              </li>
-              @endif
 
-              {{-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Siswa</a>
-              </li> --}}
 
-            @if (auth()->User()->level == 'admin')
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Data Siswa
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/dashboard/data-siswa">data siswa</a></li>
-                  <li><a class="dropdown-item" href="/dashboard/data-kelas">Data kelas</a></li>
-                  <li><a class="dropdown-item" href="/dashboard/data-spp">Data spp</a></li>
-                </ul>
-              </li>
-            @endif
-            </ul>
-            <form class="d-flex me-2" role="search">
+            <form class="d-flex " role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
@@ -111,19 +74,11 @@
 
     {{-- untuk kontent --}}
     <br>
-    @yield('konten')
+    @yield('kontent')
     <br><br>
 
     {{-- awal footer --}}
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <hr>
-            <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Your Website 2023</span>
-                <hr>
-            </div>
-        </div>
-    </footer>
+
     {{-- akhir footer --}}
 
       {{-- @stack('prepend-script')

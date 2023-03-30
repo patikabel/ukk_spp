@@ -77,39 +77,39 @@ class LoginController extends Controller
 
     }
 
-    public function redirectToProvider()
-    {
-        return Socialite::driver('google')->redirect();
-    }
-    public function handleProviderCallback(Request $request)
-    {
-        try {
-            $user_google    = Socialite::driver('google')->user();
-            $user           = User::where('email', $user_google->getEmail())->first();
+    // public function redirectToProvider()
+    // {
+    //     return Socialite::driver('google')->redirect();
+    // }
+    // public function handleProviderCallback(Request $request)
+    // {
+    //     try {
+    //         $user_google    = Socialite::driver('google')->user();
+    //         $user           = User::where('email', $user_google->getEmail())->first();
 
-            //jika user ada maka langsung di redirect ke halaman home
-            //jika user tidak ada maka simpan ke database
-            //$user_google menyimpan data google account seperti email, foto, dsb
+    //         //jika user ada maka langsung di redirect ke halaman home
+    //         //jika user tidak ada maka simpan ke database
+    //         //$user_google menyimpan data google account seperti email, foto, dsb
 
-            if($user != null){
-                \auth()->login($user, true);
-                return redirect('dashboard');
-            }else{
-                $create = User::Create([
-                    'email'                => $user_google->getEmail(),
-                    'username'             => $user_google->getName(),
-                    'password'          => 0,
-                    'email_verified_at' => now() // fungsi tgl saat ini
-                ]);
+    //         if($user != null){
+    //             \auth()->login($user, true);
+    //             return redirect('dashboard');
+    //         }else{
+    //             $create = User::Create([
+    //                 'email'                => $user_google->getEmail(),
+    //                 'username'             => $user_google->getName(),
+    //                 'password'          => 0,
+    //                 'email_verified_at' => now() // fungsi tgl saat ini
+    //             ]);
 
-                \auth()->login($create, true);
-                return redirect('/dasboard');
-            }
+    //             \auth()->login($create, true);
+    //             return redirect('/dasboard');
+    //         }
 
-        } catch (\Exception $e) {
-            return redirect('login');
-        }
-    }
+    //     } catch (\Exception $e) {
+    //         return redirect('login');
+    //     }
+    // }
 
 
 }

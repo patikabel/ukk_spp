@@ -26,7 +26,7 @@
                                 <input type="text" class="form-control @error('nominal') is-invalid @enderror" name="nominal" value="{{ old('nominal') }}">
                                 <span class="text-danger">@error('nominal') {{ $message }} @enderror</span>
                              </div>
-
+                             <br>
                              <button type="submit" class="btn btn-success btn-rounded float-right">
                                    <i class="mdi mdi-check"></i> Simpan
                              </button>
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-
+        <br><br>
         <div class="row">
             <div class="col-md-12">
              <div class="card">

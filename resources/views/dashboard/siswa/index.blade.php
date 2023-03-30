@@ -1,6 +1,6 @@
-@extends('layout.layout')
+@extends('layout.layoutsis')
 
-@section('konten')
+@section('kontent')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col col-lg-10">

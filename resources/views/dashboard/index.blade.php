@@ -3,7 +3,7 @@
 @section('konten')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col col-lg-10">
+            <div class="col">
                 @foreach ($pembayaran as $history)
                 <div class="card d-flex mr-5 mb-3" style="width: 18rem;">
                    <div class="card-body">
@@ -15,16 +15,15 @@
                             <li class="list-group-item">Kelas {{ $history->siswa->kelas->nama_kelas }}</li>
                             <li class="list-group-item">Nominal SPP Rp.{{ $spp = $history->siswa->spp->nominal }}</li>
                             <li class="list-group-item">Jumlah Bayar Rp.{{ $bayar = $history->jumlah_bayar }}</li>
-                            {{-- <li class="list-group-item">Jumlah Bayar Rp.{{ $history->jumlah_bayar }}</li> --}}
                             <li class="list-group-item">SPP Bulan <b  class="text-capitalize text-bold">{{ $history->spp_bulan }}</b></li>
                             <li class="list-group-item" style="display:none">Nominal SPP Rp.{{ $spp = $history->siswa->spp->nominal }}</li>
                             <li class="list-group-item">Tunggakan Rp.{{ $spp - $bayar }}</li>
                        </ul>
                     </span>
                     <div class="comment-footer ">
-                      <span class="text-muted float-right">{{ $history->created_at->format('M d, Y') }}</span>
+                      <span class="text-muted float-right">{{ $history->created_at->format('M d, Y') }}</span><br>
                       <span class="action-icons active">
-                              <a href="{{ url('dashboard/entry-pembayaran/'. $history->id .'/edit') }}"><i class="fa fa-solid fa-pen"></i></a>
+                              <a href="{{ url('dashboard/entry-pembayaran/'. $history->id .'/edit') }}" class="btn" role="button"><i class="bi bi-pencil-square"></i></i></a>
                           </span>
                    </div>
                    </div>

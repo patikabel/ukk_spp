@@ -53,7 +53,7 @@
                                <span class="text-danger">@error('jumlah_bayar') {{ $message }} @enderror</span>
                             </div>
 
-                           <a href="{{ url('dashboard/entry-pembayaran') }}" class="btn btn-primary btn-rounded">
+                           <a href="{{ url('dashboard') }}" class="btn btn-primary btn-rounded">
                              <i class="mdi mdi-chevron-left"></i>Kembali
                            </a>
                            <button type="submit" class="btn btn-success btn-rounded float-right">

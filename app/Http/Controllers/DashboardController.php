@@ -14,6 +14,8 @@ class DashboardController extends Controller
             'user' => User::find(auth()->User()->id)
          ];
 
-        return view('dashboard.index', $data);
+        return view('dashboard.index', $data, [
+            'title' => 'Home | Page'
+        ]);
     }
 }

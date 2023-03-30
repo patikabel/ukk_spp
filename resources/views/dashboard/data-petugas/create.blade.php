@@ -16,7 +16,7 @@
                                 Level
                              </label>
                           </div>
-                          <select name="level" class="custom-select @error('level') is-invalid @enderror">
+                          <select name="level" class="form-control @error('level') is-invalid @enderror">
                                 <option value="">Silahkan Pilih</option>
                                 <option value="admin">admin</option>
                                 <option value="petugas">petugas</option>
@@ -42,7 +42,7 @@
                                 <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password">
                                 <span class="text-danger">@error('password') {{ $message }} @enderror</span>
                              </div>
-
+                             <br>
                              {{-- <div class="form-group">
                                 <label>Konfirmasi Password</label>
                                 <input type="password" id="konfirmasi_password" class="form-control @error('confirm_password') is-invalid @enderror" name="confirm_password">

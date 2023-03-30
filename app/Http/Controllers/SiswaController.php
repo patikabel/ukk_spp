@@ -16,7 +16,7 @@ class SiswaController extends Controller
            'auth',
            'privilege:admin'
         ]);
-   }
+    }
     /**
      * Display a listing of the resource.
      *

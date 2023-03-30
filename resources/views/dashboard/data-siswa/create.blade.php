@@ -29,14 +29,14 @@
                              <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}" autocomplete="off">
                              <span class="text-danger">@error('nama') {{ $message }} @enderror</span>
                           </div>
-
+                            <br>
                              <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                    <label class="input-group-text">
                                       Kelas
                                    </label>
                                 </div>
-                                <select name="kelas" class="custom-select @error('kelas') is-invalid @enderror" {{ count($kelas) == 0 ? 'disabled' : '' }}>
+                                <select name="kelas" class="form-control @error('kelas') is-invalid @enderror" {{ count($kelas) == 0 ? 'disabled' : '' }}>
                                    @if(count($kelas) == 0)
                                       <option>Pilihan tidak ada</option>
                                    @else
@@ -67,7 +67,7 @@
                                       SPP
                                    </label>
                                 </div>
-                                <select name="spp" class="custom-select @error('spp') is-invalid @enderror" {{ count($spp) == 0 ? 'disabled' : '' }}>
+                                <select name="spp" class="form-control @error('spp') is-invalid @enderror" {{ count($spp) == 0 ? 'disabled' : '' }}>
                                    @if(count($spp) == 0)
                                       <option>Pilihan tidak ada</option>
                                    @else
