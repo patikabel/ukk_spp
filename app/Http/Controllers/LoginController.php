@@ -12,10 +12,7 @@ use Laravel\Socialite\Facades\Socialite;
 class LoginController extends Controller
 {
     public function login(){
-        return view('auth.login', [
-            'title' => 'Login | Page'
-
-        ]);
+        return view('auth.login');
     }
 
     public function authenticate(Request $request)
@@ -35,7 +32,6 @@ class LoginController extends Controller
     }
     public function loginsiswa(){
         return view('auth.login-siswa', [
-            'title' => 'LoginSiswa | Page'
 
         ]);
     }

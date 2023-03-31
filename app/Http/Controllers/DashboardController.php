@@ -10,12 +10,16 @@ class DashboardController extends Controller
 {
     public function dashboard(){
         $data = [
-            'pembayaran' => Pembayaran::orderBy('id', 'DESC')->paginate(15),
+            'pembayaran' => Pembayaran::with(['siswa'])->orderBy('id', 'DESC')->paginate(15),
             'user' => User::find(auth()->User()->id)
          ];
 
-        return view('dashboard.index', $data, [
-            'title' => 'Home | Page'
-        ]);
+        //  dd($data['pembayaran']);
+
+        return view('dashboard.index', $data);
+    }
+
+    public function home(){
+        return view('dashboard.home');
     }
 }

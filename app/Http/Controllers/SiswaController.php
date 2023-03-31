@@ -30,7 +30,6 @@ class SiswaController extends Controller
         ];
 
         return view('dashboard.data-siswa.index', $data, [
-            'title' => 'Siswa | Page'
 
         ]);
     }
@@ -48,7 +47,9 @@ class SiswaController extends Controller
             'spp' => Spp::all(),
         ];
 
-        return view('dashboard.data-siswa.create', $data);
+        return view('dashboard.data-siswa.create', $data, [
+
+        ]);
     }
 
     /**
@@ -121,7 +122,9 @@ class SiswaController extends Controller
             'spp' => Spp::all(),
         ];
 
-        return view('dashboard.data-siswa.edit', $data);
+        return view('dashboard.data-siswa.edit', $data, [
+
+        ]);
     }
 
     /**

@@ -60,7 +60,7 @@
                              <textarea class="form-control @error('alamat') is-invalid @enderror" rows="5" name="alamat" autocomplete="off">{{ old('alamat') }}</textarea>
                              <span class="text-danger">@error('alamat') {{ $message }} @enderror</span>
                           </div>
-
+                          <br>
                           <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                    <label class="input-group-text">

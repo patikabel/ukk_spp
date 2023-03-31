@@ -3,8 +3,8 @@
 @section('konten')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col">
-                @foreach ($pembayaran as $history)
+            @foreach ($pembayaran as $history)
+            <div class="col-lg-3">
                 <div class="card d-flex mr-5 mb-3" style="width: 18rem;">
                    <div class="card-body">
                       <span class="badge badge-success badge-rounded float-right"badge badge-success badge-rounded float-right>{{ $history->updated_at->diffforHumans() }}</span>
@@ -28,8 +28,8 @@
                    </div>
                    </div>
                </div>
-             @endforeach
             </div>
+            @endforeach
         </div>
         @if($pembayaran->lastPage() != 1)
         <div class="btn-group float-right">

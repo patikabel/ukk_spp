@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   </head>
-  <body style="background-color: #D5B4B4">
+  <body style="background-color: #94AF9F">
     <div class="container">
         <div class="row justify-content-center">
             <div class="d-flex justify-content-center">
@@ -34,7 +34,7 @@
                                     id="password" name="password" placeholder="Password">
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
+                            <button type="submit" class="btn btn-block mb-4" style="background-color: #AEC2B6">Login</button>
                             {{-- <a href="/auth/redirect" class="btn btn-google btn-user btn-block">
                                 <i class="fab fa-google fa-fw"></i> Login with Google
                             </a> --}}

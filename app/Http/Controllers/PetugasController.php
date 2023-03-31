@@ -27,7 +27,6 @@ class PetugasController extends Controller
          ];
 
         return view('dashboard.data-petugas.index', $data, [
-            'title' => 'Petugas | Page'
 
         ]);
     }
@@ -44,7 +43,6 @@ class PetugasController extends Controller
       ];
 
        return view('dashboard.data-petugas.create', $data, [
-        'title' => 'EditPetugas | Page'
 
        ]);
     }
@@ -110,7 +108,9 @@ class PetugasController extends Controller
             'edit' => User::find($id)
         ];
 
-        return view('dashboard.data-petugas.edit', $data);
+        return view('dashboard.data-petugas.edit', $data, [
+
+        ]);
     }
 
     /**

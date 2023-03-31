@@ -20,10 +20,7 @@ class HistoryController extends Controller
             'user' => User::find(auth()->User()->id)
          ];
 
-         return view('dashboard.history-pembayaran.index', $data, [
-            'title' => 'History | Page'
-
-         ]);
+         return view('dashboard.history-pembayaran.index', $data);
     }
 
     /**

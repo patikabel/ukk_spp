@@ -26,10 +26,7 @@ class KelasController extends Controller
             'user' => User::find(auth()->user()->id),
        ];
 
-      return view('dashboard.data-kelas.index', $data, [
-        'title' => 'Kelas | Page'
-
-      ]);
+      return view('dashboard.data-kelas.index', $data);
     }
 
     /**

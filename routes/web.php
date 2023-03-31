@@ -35,6 +35,7 @@ route::get('/logout/siswa', [LoginController::class, 'logout2']);
 
 // isi petugas/ admin
 Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+Route::get('/home', [DashboardController::class, 'home']);
 Route::resource('/dashboard/data-petugas', PetugasController::class);
 Route::resource('/dashboard/entry-pembayaran', PembayaranController::class);
 Route::resource('/dashboard/history-pembayaran', HistoryController::class);

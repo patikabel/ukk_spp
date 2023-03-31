@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
         Siswa::create([
             'nisn' => '1234567898',
             'nis'  => '22373687',
-            'nama' => 'siswa',
+            'nama' => 'patika',
             'id_kelas' => 1,
             'nomor_telp' => '089689957106',
             'alamat' => 'Majalengka',

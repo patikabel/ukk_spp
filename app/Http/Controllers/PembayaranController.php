@@ -29,7 +29,6 @@ class PembayaranController extends Controller
         ];
 
         return view('dashboard.entry-pembayaran.index', $data, [
-            'title' => 'Bayar | Page'
 
         ]);
     }
@@ -114,7 +113,6 @@ class PembayaranController extends Controller
          ];
 
          return view('dashboard.entry-pembayaran.edit', $data, [
-            'title' => 'EditBayar | Page'
 
          ]);
     }

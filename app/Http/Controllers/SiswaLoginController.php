@@ -25,7 +25,6 @@ class SiswaLoginController extends Controller
          ];
 
         return view('dashboard.siswa.index', $data, [
-            'title' => 'Dashboard | Page'
 
         ]);
     }
